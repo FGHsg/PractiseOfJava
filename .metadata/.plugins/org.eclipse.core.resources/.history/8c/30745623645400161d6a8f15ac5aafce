@@ -1,0 +1,45 @@
+
+public class Student {
+	/*
+	 *定义私有变量 不能由外部直接改变--封装
+	 */
+	private int age;
+	private int id;
+	private String str;
+	private String name;
+	
+	/*
+	 *设置学生属性值的方法
+	 */
+	public void setage(int age){
+		this.age = age;
+	}
+	public void setid(int id){
+		this.id = id;
+	}
+	public void setstr(String str){
+		this.str = str;
+	}
+	public void setname(String name){
+		this.name = name;
+	}
+/*
+ *获得学生属性值的方法
+ */
+	public int getage(){
+		return this.age;
+	}
+	public int getid(){
+		return this.id;
+	}
+	public String getstr(){
+		return this.str;
+	}
+	public String getname(){
+		return this.name;
+	}
+	
+	public void tostring(){
+		System.out.print("id+"\t"+age+"\t"+name+"\t"+str");
+	}
+}

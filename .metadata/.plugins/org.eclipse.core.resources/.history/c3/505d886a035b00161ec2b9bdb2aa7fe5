@@ -1,0 +1,10 @@
+
+public class Seven_1 {
+	public static void main(String[] args){
+		aa.show();
+	}
+}
+
+class show{
+	System.out.println("程序顺利运行中");
+}

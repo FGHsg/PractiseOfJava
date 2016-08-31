@@ -1,0 +1,6 @@
+package com.bjsxt.hibernate.model;
+
+public class Husband {
+	private int id;
+	private String name;
+}

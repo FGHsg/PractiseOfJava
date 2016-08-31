@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+
+import com.bjsxt.hibernate.model.Student;
+
+
+public class Session {
+
+	public void save(Student s) {	
+		String tableName = "_Student";//Assumetion develop
+		Map<String,String> cfs = new HashMap<String,String>();
+		cfs.put("_id", "id");
+		cfs.put("_name", "name");
+		cfs.put("_age", "age");
+	}
+
+}

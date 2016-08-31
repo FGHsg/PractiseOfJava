@@ -1,0 +1,21 @@
+import java.util.Scanner;
+/*******************
+ * 显示1990年1月1日到2016年6月20日的天数
+ * @author FGHsg_
+ *
+ */
+public class calender {
+	public static void main(String args[]){
+		int sum=0;
+		int i=0;
+		System.out.println("请输入年月日：");
+		for(i=1990;i<=2015;i++){
+			if(i%4==0&&i%100!=0||i%400==0){
+				sum+=366;
+			}
+			else{
+			
+		}
+		}
+	}
+}

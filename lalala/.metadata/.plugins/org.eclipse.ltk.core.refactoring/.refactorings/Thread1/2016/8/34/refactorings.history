@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Tank1.java&apos; to &apos;TankWar0.1/src&apos;&#x0D;&#x0A;- Original project: &apos;Thread1&apos;&#x0D;&#x0A;- Destination element: &apos;TankWar0.1/src&apos;&#x0D;&#x0A;- Original element: &apos;Tank1.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=TankWar0.1/src" element1="/src&lt;{Tank1.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1471256649861" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\Users\FGHsg_\Desktop\java\lalala\.metadata\.plugins\org.eclipse.jdt.core
+2640631756.index
+2235272219.index
+555910868.index

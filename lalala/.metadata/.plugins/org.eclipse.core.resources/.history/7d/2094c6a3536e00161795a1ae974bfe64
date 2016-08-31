@@ -1,0 +1,36 @@
+package com.bjsxt.hibernate.model;
+
+import static org.junit.Assert.*;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+import org.junit.Test;
+
+public class TeacherTest {
+
+	@Test
+	public void test() {
+		Teacher t = new Teacher();
+		t.setId(2);
+		t.setName("t2");
+		t.setTitle("中级");
+		
+		
+//		SessionFactory sf = new AnnotationConfiguration().buildSessionFactory();
+		Configuration cfg = new AnnotationConfiguration();
+		
+		SessionFactory sf = cfg.configure().buildSessionFactory();
+		
+		Session session= sf.openSession();
+		
+		session.beginTransaction();
+		session.save(t);
+		session.getTransaction().commit();//注意一定要提交到数据库 否则执行不了
+		
+		session.close();
+		sf.close();
+	}
+
+}

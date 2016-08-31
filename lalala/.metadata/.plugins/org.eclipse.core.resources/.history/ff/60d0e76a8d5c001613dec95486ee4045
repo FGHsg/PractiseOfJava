@@ -1,0 +1,20 @@
+import java.awt.*;
+import javax.swing.*;
+public class GUI1_1 extends JFrame{
+	public static void main(String[] args){
+		
+		//JFrame a = new JFrame();
+		
+	}
+	
+	public GUI1_1(){
+		this.setTitle("lily");
+		this.setSize(350, 280);
+		this.setLocation(380,250);
+		JButton b = new JButton("lily");
+		this.add(b);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+	}
+}

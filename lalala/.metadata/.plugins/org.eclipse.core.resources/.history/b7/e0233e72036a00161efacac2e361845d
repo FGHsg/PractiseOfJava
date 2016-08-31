@@ -1,0 +1,77 @@
+import javax.swing.*;
+import java.sql.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+
+public class DB02 extends JFrame implements ActionListener{
+	JPanel jp1,jp2;
+	JLabel jl;
+	JTextField jtext;
+	JTable jtable;
+	JButton jb1,jb2,jb3,jb4;
+	JScrollPane js;
+	
+	Message mess1;
+	
+	public static void main(String[] args){
+		 DB02 db = new DB02();
+	}
+	public DB02(){
+		jp1= new JPanel();
+		jp2= new JPanel();
+		jl= new JLabel("请输入学生姓名");
+		jtext = new JTextField(10);		
+		
+		jb1 = new JButton("搜索");
+		jb1.setActionCommand("search");
+		jb1.addActionListener(this);
+		jb2 = new JButton("新增");
+		jb2.setActionCommand("add");
+		jb2.addActionListener(this);
+		jb3 = new JButton("修改");
+		jb3.setActionCommand("fix");
+		jb3.addActionListener(this);
+		jb4 = new JButton("删除");
+		jb4.setActionCommand("delete");
+		jb4.addActionListener(this);
+		
+		jp1.add(jl);jp1.add(jtext);jp1.add(jb1);
+		jp2.add(jb2);jp2.add(jb3);jp2.add(jb4);		
+		
+		mess1=new Message();
+		jtable = new JTable(mess1);
+		js = new JScrollPane(jtable);
+		
+		this.add(jp1,"North");
+		this.add(jp2,"South");
+		this.add(js);
+		
+		this.setLocation(100, 80);
+		this.setSize(600, 500);
+		this.setTitle("学生管理系统");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setVisible(true);				
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		if(e.getActionCommand().equals("search")){
+			String name = this.jtext.getText().trim();
+			String sql = "select* from stu where named ='" +name+"'";
+			mess1=new Message(sql);
+			jtable.setModel(mess1);
+		}
+		else if(e.getActionCommand().equals("add")){
+			System.out.print("bbb");
+		}
+		else if(e.getActionCommand().equals("fix")){
+			System.out.print("ccc");
+		}
+		else if(e.getActionCommand().equals("delete")){
+			System.out.print("ddd");
+		}
+	}
+
+}

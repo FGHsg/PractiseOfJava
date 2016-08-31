@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Score_managment {
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("请输入学生人数： ");
+		int Stu_num = in.nextInt();
+		System.out.println("请输入课程数目： ");
+		int Course_num = in.nextInt();
+		
+	}
+}

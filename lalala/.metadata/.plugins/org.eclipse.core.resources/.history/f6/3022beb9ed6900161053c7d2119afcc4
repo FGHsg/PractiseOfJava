@@ -1,0 +1,116 @@
+import javax.swing.*;
+import java.sql.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+
+public class DB02 extends JFrame implements ActionListener{
+	JPanel jp1,jp2;
+	JLabel jl;
+	JTextField jtext;
+	JTable jtable;
+	JButton jb1,jb2,jb3,jb4;
+	JScrollPane js;
+	
+	Vector ziduan,jilu;
+	PreparedStatement ps= null;
+	Connection connect = null;
+	ResultSet rs = null;
+	
+	public static void main(String[] args){
+		 DB02 db = new DB02();
+	}
+	public DB02(){
+		jp1= new JPanel();
+		jp2= new JPanel();
+		jl= new JLabel("请输入学生姓名");
+		jtext = new JTextField(10);		
+		
+		jb1 = new JButton("搜索");
+		jb1.setActionCommand("search");
+		jb1.addActionListener(this);
+		jb2 = new JButton("新增");
+		jb1.setActionCommand("add");
+		jb1.addActionListener(this);
+		jb3 = new JButton("修改");
+		jb1.setActionCommand("fix");
+		jb1.addActionListener(this);
+		jb4 = new JButton("删除");
+		jb1.setActionCommand("delete");
+		jb1.addActionListener(this);
+		
+		jp1.add(jl);jp1.add(jtext);jp1.add(jb1);
+		jp2.add(jb2);jp2.add(jb3);jp2.add(jb4);
+		
+		ziduan = new Vector();
+		ziduan.add("学号");
+		ziduan.add("姓名");
+		ziduan.add("性别");
+		ziduan.add("年龄");
+		ziduan.add("籍贯");
+		ziduan.add("院系");
+		
+		jilu = new Vector();
+		try{
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");			
+			connect = DriverManager.getConnection("jdbc:odbc:SQL server", "sa", "321wssba");
+			ps= connect.prepareStatement("select * from stu");
+			rs= ps.executeQuery();
+			
+			while(rs.next()){
+				Vector row = new Vector();
+				
+				row.add(rs.getInt(1));
+				row.add(rs.getString(2));
+				row.add(rs.getString(3));
+				row.add(rs.getInt(4));
+				row.add(rs.getString(5));
+				row.add(rs.getString(6));
+				
+				jilu.add(row);
+			}
+		
+		}
+		catch(Exception e){}
+		finally{
+			try{
+				if(rs!=null){
+					rs.close();
+				}
+				if(ps!=null){
+					ps.close();
+				}
+			}catch(Exception e){}
+		}
+		jtable = new JTable(jilu,ziduan);
+		js = new JScrollPane(jtable);
+		
+		this.add(jp1,"North");
+		this.add(jp2,"South");
+		this.add(js);
+		
+		this.setLocation(100, 80);
+		this.setSize(600, 500);
+		this.setTitle("学生管理系统");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setVisible(true);				
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		if(e.getActionCommand().equals("search")){
+			System.out.print("aaa");
+		}
+		else if(e.getActionCommand().equals("add")){
+			System.out.print("aaa");
+		}
+		else if(e.getActionCommand().equals("fix")){
+			System.out.print("aaa");
+		}
+		else if(e.getActionCommand().equals("delete")){
+			System.out.print("aaa");
+		}
+	}
+
+}

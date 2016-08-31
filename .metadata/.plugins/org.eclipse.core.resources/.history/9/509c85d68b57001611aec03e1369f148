@@ -1,0 +1,15 @@
+class fu{
+	fu{
+		System.out.println("我是父类")；
+	}
+}
+
+class zi{
+	zi{
+		System.out.println("我是子类")；
+	}
+}
+
+public class Six_3 {
+
+}

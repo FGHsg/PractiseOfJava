@@ -1,0 +1,45 @@
+import java.sql.DriverManager;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.bjsxt.hibernate.model.Student;
+
+
+public class Session {
+	String tableName = "_Student";//Assumetion develop
+	Map<String,String> cfs = new HashMap<String,String>();
+	
+	public Session(){
+		cfs.put("_id", "id");
+		cfs.put("_name", "name");
+		cfs.put("_age", "age");//yuanben zai peizhiwenjianzhong 
+		
+	}
+	public void save(Student s) {	
+		String sql =  createSQL();
+		Class.forName("com.mysql.jdbc.Driver");
+		Connnection conn  = DriverManager.getConnection("jdbc:mysql://localhost/hibernate,"root","321wssba");
+	}
+
+	private String createSQL() {
+		String str1="";
+		String str2="";
+		for(String s :cfs.keySet()){
+			str1+=s+",";
+		}
+		str1 =str1.substring(0,str1.length()-1);
+		
+		
+		
+		for(int i =0;i<cfs.size();i++){
+			str2+="?,";
+		}
+		str2 = str2.substring(0,str2.length()-1);
+		
+		
+		String sql = "insert into" + tableName +"(" + str1 + ")" +"values (" +str2 + ")";
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,18 @@
+
+public class Six_1 {
+	Students a = new Students();
+	Students b = new Students();
+	a.country = "zhongguo";
+	System.out.print{b.country};
+}
+
+
+
+class Students{
+	int age;
+	String name;
+	static String country;
+	static void print(){
+		System.out.print("lalllaala");
+	}
+}

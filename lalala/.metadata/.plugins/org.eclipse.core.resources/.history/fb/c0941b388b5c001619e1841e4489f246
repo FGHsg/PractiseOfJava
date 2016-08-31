@@ -1,0 +1,11 @@
+import java.awt.*;
+import javax.swing.*;
+public class GUI1_1 {
+	public static void main(String[] args){
+		JFrame a = new JFrame();
+		a.setTitle("lily");
+		a.setVisible(true);
+		JButton b = new JButton("lily");
+	}
+	
+}

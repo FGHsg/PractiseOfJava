@@ -1,0 +1,28 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class Text01 {
+
+public static void main(String[] args) {
+		/*p("aaa".matches("..."));
+		p("a5678d".replaceAll("\\d", "-"));
+		Pattern p = Pattern.compile("[a-z]{3}");
+		Matcher m = p.matcher("fad");
+		p(m.matches());
+		p("fad".matches("[a-z]{3}"));
+		*/
+		
+		//初步认识 .所有字符 *零个或多个 +一个或多个
+		/*p("aa".matches(".."));
+		p("".matches("a*"));
+		p("aa".matches("a*"));
+		p("aa".matches("a+"));*/
+		p("109.178.202.aaa".matches("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"));
+	}
+
+public static void p(Object a){
+	System.out.println(a);
+}
+}
+

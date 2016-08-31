@@ -1,0 +1,45 @@
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+
+public class TestReflection {
+
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		String str = "T";
+		
+		Class c = Class.forName(str);
+		 
+		Object o =c.newInstance();
+		Method[] m1 = c.getMethods();
+		for(Method m : m1){
+			if(m.getName().equals(m1)){
+				m.invoke(o);
+			}
+		}
+	}
+
+}
+
+class T{
+	int i;
+	String s;
+	public void mm(){
+		System.out.println("mm invoked!");
+	}
+	
+	
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+	public String getS() {
+		return s;
+	}
+	public void setS(String s) {
+		this.s = s;
+	}
+	
+	
+}

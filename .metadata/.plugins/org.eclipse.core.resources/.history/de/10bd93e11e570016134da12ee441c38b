@@ -1,0 +1,17 @@
+
+public class Six_2 {
+	public static void main(String[] a){
+		//new Block1();
+		System.out.println("我是主函数");
+	}
+	
+}
+
+class Block1{
+	static{
+		System.out.println("我是静态代码块");
+	}
+	{
+		System.out.println("I'm Code block;");
+	}
+}

@@ -1,0 +1,15 @@
+
+public class Six_1 {
+	
+}
+
+
+
+class Student{
+	int age;
+	String name;
+	static String country;
+	static void print(){
+		Syystem.out.print("lalllaala")
+	}
+}

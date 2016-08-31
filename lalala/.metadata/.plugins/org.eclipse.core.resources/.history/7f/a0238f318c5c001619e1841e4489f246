@@ -1,0 +1,14 @@
+import java.awt.*;
+import javax.swing.*;
+public class GUI1_1 {
+	public static void main(String[] args){
+		JFrame a = new JFrame();
+		a.setTitle("lily");
+		a.setSize(350, 280);
+		a.setLocation(380,250);
+		a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		a.setVisible(true);
+		JButton b = new JButton("lily");
+	}
+	
+}

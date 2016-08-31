@@ -1,0 +1,8 @@
+import javax.swing.*;
+
+
+public class DB02 extends JFrame {
+	public static void main(String[] args){
+		
+	}
+}

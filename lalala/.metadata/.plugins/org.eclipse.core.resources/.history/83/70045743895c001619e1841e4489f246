@@ -1,0 +1,5 @@
+import java.awt.*;
+import javax.swing.*;
+public class GUI1_1 {
+	JFrame a = new JFrame();
+}

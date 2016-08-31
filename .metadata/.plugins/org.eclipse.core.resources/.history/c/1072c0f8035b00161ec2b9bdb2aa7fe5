@@ -1,0 +1,15 @@
+import java.util.*;
+public class Seven_1 {
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		a= in.nextI;nt();
+		b= in.nextI;nt();
+		show();
+	}
+}
+
+class show1{
+	static void show(){
+	System.out.println("程序顺利运行中");
+	}
+}

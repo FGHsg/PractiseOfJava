@@ -1,0 +1,10 @@
+INDEX VERSION 1.121+C:\Users\FGHsg_\Desktop\java\.metadata\.plugins\org.eclipse.jdt.core
+3690246233.index
+1494923737.index
+2003146235.index
+1791787353.index
+1768247720.index
+4037672434.index
+3892089049.index
+3364712341.index
+166334183.index

@@ -1,0 +1,41 @@
+import java.lang.reflect.Method;
+
+
+public class TestReflection {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		String str = "T";
+		
+		Class c = Class.forName(str);
+		Object o = c.newInstance();
+		Method[] m = c.getMethods();
+		for(Method m:m.getName()){
+			
+		}
+	}
+
+}
+
+class T{
+	int i;
+	String s;
+	public void mm(){
+		System.out.println("mm invoked!");
+	}
+	
+	
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+	public String getS() {
+		return s;
+	}
+	public void setS(String s) {
+		this.s = s;
+	}
+	
+	
+}

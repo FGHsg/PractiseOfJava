@@ -1,0 +1,36 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Gui1_3 extends JFrame
+{
+    JSplitPane cf;
+    JList lb;
+    JLabel bq,dq;
+    
+	public static void main(String[] args) 
+    {
+		Gui1_3 lx=new Gui1_3();
+	}
+	
+	Gui1_3()
+	{
+		String[] jsj={"ÑîÔª²©ÄãÊÇÉµ±ÆÂğ","ÑîÔª²©ÄãÊÇÉµ±ÆÂğ","ÑîÔª²©ÄãÊÇÉµ±ÆÂğ","ÑîÔª²©ÄãÊÇÉµ±ÆÂğ","ÑîÔª²©ÄãÊÇÉµ±ÆÂğ"};
+		lb=new JList(jsj);
+		
+		bq=new JLabel(new ImageIcon("image/a.jpg"));
+		dq=new JLabel(new ImageIcon("image/b.png"));
+		cf=new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,dq,bq);
+		
+		cf.setOneTouchExpandable(true);
+		
+		this.add(cf);
+		
+		this.setTitle("ÑîÔª²©ÄãÊÇÉµ±ÆÂğ");
+		 this.setSize(690,480);
+		 this.setLocation(300,280);
+		// this.setResizable(false);
+		 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		 this.setVisible(true);	
+		
+	}
+}
